@@ -17,7 +17,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock HorizontalAlignment="Left" Margin="35,11,0,0" TextWrapping="Wrap" Text="Количество км" VerticalAlignment="Top" Height="22" Width="127" FontSize="18"/>
-                    <TextBox x:Name="KmCountText" HorizontalAlignment="Left" Margin="178,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="24" FontSize="18" TextAlignment="Center" UndoLimit="104"/>
+                    <TextBox x:Name="KmCountText" HorizontalAlignment="Left" Margin="178,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="24" FontSize="18" TextAlignment="Center" UndoLimit="104" TextChanged="KmCountText_TextChanged"/>
                     <TextBlock HorizontalAlignment="Left" 
            ToolTip="Мелкогабаритный - до 20 кг, до 180 см" 
            Margin="35,75,0,0" TextWrapping="Wrap" Text="Вид товара" VerticalAlignment="Top" Height="22" Width="127" FontSize="18" RenderTransformOrigin="0.542,-2.133"/>
@@ -32,15 +32,18 @@
                     <TextBox x:Name="FloorNumberText" HorizontalAlignment="Left" Margin="84,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" FontSize="18" Height="25"/>
                     <CheckBox x:Name="ElevatorCheckBox" Content="  Лифт" IsChecked="{Binding IsChecked}" HorizontalAlignment="Left" Margin="82,193,0,0" VerticalAlignment="Top" Height="29" Width="132" FontSize="18" Checked="ElevatorCheckBox_Checked"/>
                     <TextBlock HorizontalAlignment="Left" Margin="35,40,0,0" TextWrapping="Wrap" Text="Вес" VerticalAlignment="Top" Height="27" Width="94" FontSize="18"/>
-                    <TextBox x:Name="WeightText" HorizontalAlignment="Left" Margin="178,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="27" FontSize="18" TextAlignment="Center"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="542,389,0,0" TextWrapping="Wrap" Text="Итого:" VerticalAlignment="Top" Height="34" Width="80" FontSize="22"/>
-                    <TextBox x:Name="ResultText" HorizontalAlignment="Left" Margin="627,389,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Height="34" FontSize="22"/>
+                    <TextBox x:Name="WeightText" HorizontalAlignment="Left" Margin="178,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="27" FontSize="18" TextAlignment="Center" TextChanged="WeightText_TextChanged"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="472,389,0,0" TextWrapping="Wrap" Text="Итого доставка:" VerticalAlignment="Top" Height="34" Width="165" FontSize="22"/>
+                    <TextBox x:Name="ResultText" HorizontalAlignment="Left" Margin="667,389,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Height="34" FontSize="22"/>
                     <Button x:Name="ResultButton" Content="Посчитать" HorizontalAlignment="Left" Margin="35,385,0,0" VerticalAlignment="Top" Height="38" Width="160" FontSize="18" Click="ResultButton_Click" Background="#FFB9B9B9"/>
                     <CheckBox x:Name="LargeCheckBox" Content="  Есть коробки больше 2 м" IsChecked="{Binding IsChecked}" HorizontalAlignment="Left" Margin="82,233,0,0" VerticalAlignment="Top" Height="25" Width="265" FontSize="18"/>
                     <TextBlock HorizontalAlignment="Left" Margin="472,11,0,0" TextWrapping="Wrap" Text="Санкт-Петербург" VerticalAlignment="Top" Width="336"/>
                     <TextBlock HorizontalAlignment="Left" Margin="472,40,0,0" TextWrapping="Wrap" Text="Доставка осуществляется на следующий день после покупки. С покупателем свяжется сотрудник доставки и согласует время, а также уточнит адрес. Доставка должна быть оформлена не позднее 19:00. В крайних случаях, можно после 19:00 по согласованию с оператором службы доставки." VerticalAlignment="Top" Height="103" Width="358"/>
                     <TextBlock HorizontalAlignment="Left" Margin="472,162,0,0" TextWrapping="Wrap" Text="Если итоговая стоимость составляет более 1 000 000 руб, необходимо посчитать вручную" VerticalAlignment="Top" Height="44" Width="358"/>
                     <TextBlock HorizontalAlignment="Left" Margin="472,0,0,0" TextWrapping="Wrap" Text="Мелкогабаритный товар: вес не более 20 кг, длина упаковки - не более 180 см" VerticalAlignment="Center" Height="45" Width="358"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="472,436,0,0" TextWrapping="Wrap" Text="Итого подъем:" VerticalAlignment="Top" Height="34" Width="165" FontSize="22"/>
+                    <TextBox x:Name="ResultTextAscent" HorizontalAlignment="Left" Margin="667,436,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Height="34" FontSize="22"/>
+                    <TextBlock x:Name="CommentsText" HorizontalAlignment="Left" Margin="35,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="795" Height="47" FontSize="18" TextAlignment="Center" Foreground="#FFE22323"/>
 
                 </Grid>
             </TabItem>
